@@ -22,3 +22,15 @@ btn.addEventListener('click', function() {
     
     console.log("Вибрано цитату №" + randomIndex);
 });
+function getRandomColor() {
+    const colors = ["red","blue","green","purple","orange"];
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+btn.addEventListener("click", function() {
+
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    textElement.textContent = quotes[randomIndex];
+
+    textElement.style.color = getRandomColor();
+});
